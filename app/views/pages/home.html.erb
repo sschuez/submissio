@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Willkommen bei submissio</h1>
+<p>Ihr Portal zur eifachen Erstellung von Submissionen</p>
+
+<% if current_user == nil %>
+	<%= link_to "Login", new_user_session_path, class: "btn btn-primary mb-5" %>
+<% else %>
+	<%= link_to "Your submission", '#', class: "btn btn-primary mb-5" %>	
+<% end %>
